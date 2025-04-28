@@ -63,3 +63,9 @@ Voraussetzung:
 3. Das File mit den encrypt.ps1 verschlüsseln (Schritt weiter oben schon beschrieben)
 4. nochmals python .\shannonentropie.py
 5. Jetzt solle der Hinweis kommen: Die Datei ist warhscheinlich verschlüsselt oder komprimiert.
+
+## KQL
+Voraussetzung:
+- MDE
+- Eine Umgebung mit Testdaten oder Produktivdaten
+Um dies zu testen, kann das Skript ganz einfach übers Advanced Hunting in MDE getestet werden. Es deckt nur die letzten 3 Tage ab, das kann aber einfach angepasst werden auf die gewünschte Spanne.
