@@ -68,5 +68,5 @@ Voraussetzung:
 ## KQL
 Voraussetzung:
 - MDE
-- Eine Umgebung mit Testdaten oder Produktivdaten
-Um dies zu testen, kann das Skript ganz einfach übers Advanced Hunting in MDE getestet werden. Es deckt nur die letzten 3 Tage ab, das kann aber einfach angepasst werden auf die gewünschte Spanne.
+- Eine Umgebung mit Testdaten oder Produktivdaten.
+- Um dies zu testen, kann das Skript ganz einfach übers Advanced Hunting in MDE getestet werden. Es deckt nur die letzten 3 Tage ab, das kann aber einfach angepasst werden auf die gewünschte Spanne.
