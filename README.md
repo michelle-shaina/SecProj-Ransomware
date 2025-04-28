@@ -33,3 +33,20 @@ Voraussetzung:
 - Alles muss sich im Ordner C:\tmp befinden.
 
 Das encoded.txt File ist nichts anderes als das encrypt.ps1 File, einfach base64 kodiert. Im \tmp Verzeichnis eine Powershell öffnen und das Skript wmi-attack.ps1 ausführen. Danach sich als Benutzer*in abmelden und neu einloggen beim Windows. Jetzt kurz ein paar Sekunden warten bis alles gestartet ist und das File text.txt sollte jetzt AES-Verschlüsselt sein.
+
+## DLL-Szenario
+Voraussetzung: 
+- Das faultrep.cs file
+- werfault.exe vom eigenen System
+- Eine IDE und zusätzliche Pakete zum eine DLL erstellen (oder Personal Preference Tool)
+- Das text.txt File
+- 
+Dieses Szenario kann wegen verschieden OS-Architekturen und Systemkonfigurationen wahrscheinlich nicht einfach mit "runterladen" getestet werden. 
+Hier ist was gemacht werden kann:
+1. Das faultrep.cs File aus dem DLL-Sideloading Ordner nehmen und in eine DLL konvertieren. Ich habe es mit dem DLLExport NuGet-Packet gemacht, es gibt natürlich noch andere Möglichkeiten. Das ist Personal Preference und der Anwenderperson überlassen. 
+2. Als nächstes soll werfault.exe in den \tmp Ordner geladen werden, hierzu kann folgender Befehl genommen werden (je nach dem wo es sich befindet, kann das natürlich variieren): copy C:\Windows\System32\werfault.exe C:\tmp\
+3. werfault.exe in crash.exe unbenennen
+Jetzt sollte sich die faultrep.dll und die crash.exe im \tmp Ordner befinden. Wenn das der Fall ist, kann der Angriff mit folgendem Befehl ausgeführt werden:
+Start-Process "C:\tmp\crash.exe"
+Danach sollte die Datei text.txt erfolgreich verschlüsselt sein.
+
