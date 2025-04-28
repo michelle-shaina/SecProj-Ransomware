@@ -1,7 +1,7 @@
 # SecProj-Ransomware
-Meine erarbeiteten Scripts zu meinem Projekt im Secure Project. 
-Allgemein habe ich mich in einem Windows 11 Umfeld bewegt. Ich versuche hier alle Skripts so zu erklären, dass diese auch selbst getestet werden können. 
-Die KQL-Query, wurde auf der internen Umgebung im Geschäft getestet auf dem Microsoft Defender Endpoint über Advanced Hunting. Diese kann selbst im Unternehmen getestet werden oder mit einer guten Test-Umgebung die selbst aufgebaut wurde mit den richtigen Testdaten. Dieses Skript werde ich in dem Fall auch nur so erklären, dass es in einer fertig aufgesetzten Umgebung getestet werden könnte.
+Hier sind alle meine erarbeiteten Skripts zum Secure Project. 
+Ich versuche hier alle Skripts so zu erklären, dass diese auch selbst getestet werden können. 
+Die KQL-Query, wurde auf der internen Umgebung im Unternehmen getestet auf dem Microsoft Defender for Endpoint über Advanced Hunting. Diese kann selbst im Unternehmen getestet werden oder mit einer guten Test-Umgebung die selbst aufgebaut wurde. Dieses Skript werde ich in dem Fall auch nur so erklären, dass es in einer fertig aufgesetzten Umgebung getestet werden könnte.
 
 ## Voraussetzungen
 - Umfeld: Windows 11 (Version selbst sollte keine Rolle spielen)
