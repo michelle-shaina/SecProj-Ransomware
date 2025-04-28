@@ -25,3 +25,11 @@ Wenn das text.txt File jetzt geöffnet wird sollte es Verschlüsselt sein.
 Das text.txt File wieder schliessen. In einer Powershell Konsole decrypt.ps1 ausführen
 Das text.txt File sollte jetzt wieder entschlüsselt sein. 
 
+## WMI-Szenario
+Voraussetzung:
+- Das Skript wmi-attack.ps1
+- Das encoded.txt File
+- Das text.txt File
+- Alles muss sich im Ordner C:\tmp befinden.
+
+Das encoded.txt File ist nichts anderes als das encrypt.ps1 File, einfach base64 kodiert. Im \tmp Verzeichnis eine Powershell öffnen und das Skript wmi-attack.ps1 ausführen. Danach sich als Benutzer*in abmelden und neu einloggen beim Windows. Jetzt kurz ein paar Sekunden warten bis alles gestartet ist und das File text.txt sollte jetzt AES-Verschlüsselt sein.
