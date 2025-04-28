@@ -1,0 +1,35 @@
+let safeSlackDomains = dynamic(["slack.com", "slack-edge.com", "files.slack.com", "slackb.com", "slackb.slack.com"]);
+DeviceProcessEvents
+| where Timestamp > ago(3d)
+| where FileName in~ ("powershell.exe", "pwsh.exe", "cscript.exe", "wscript.exe", "wmic.exe", "mshta.exe", "rundll32.exe", "regsvr32.exe")
+| where not(ProcessCommandLine has "Start-Process powershell -Verb runAs")
+| where ProcessCommandLine has_any (
+    "FromBase64String", 
+    "Invoke-Expression", 
+    "IEX", 
+    "DownloadString", 
+    "New-Object Net.WebClient", 
+    "Invoke-WebRequest", 
+    "$(",
+    "System.Reflection",
+    "Add-Type",
+    "Start-Process",
+    "Start-BitsTransfer"
+)
+| extend URL = extract(@"['""]?(https?://[^\s'""]+)", 1, ProcessCommandLine)
+| where not (
+    InitiatingProcessFileName == "slack.exe" and 
+    URL has_any(safeSlackDomains)
+)
+| where InitiatingProcessFileName in~ (
+    "winword.exe", 
+    "excel.exe", 
+    "outlook.exe", 
+    "teams.exe", 
+    "slack.exe", 
+    "chrome.exe", 
+    "firefox.exe", 
+    "explorer.exe",
+    "mstsc.exe"
+)
+| project-reorder Timestamp, DeviceName, AccountName, FileName, ProcessCommandLine, InitiatingProcessFileName, URL
