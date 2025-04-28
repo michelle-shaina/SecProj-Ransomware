@@ -40,7 +40,7 @@ Voraussetzung:
 - werfault.exe vom eigenen System
 - Eine IDE und zusätzliche Pakete zum eine DLL erstellen (oder Personal Preference Tool)
 - Das text.txt File
-- 
+
 Dieses Szenario kann wegen verschieden OS-Architekturen und Systemkonfigurationen wahrscheinlich nicht einfach mit "runterladen" getestet werden. 
 Hier ist was gemacht werden kann:
 1. Das faultrep.cs File aus dem DLL-Sideloading Ordner nehmen und in eine DLL konvertieren. Ich habe es mit dem DLLExport NuGet-Packet gemacht, es gibt natürlich noch andere Möglichkeiten. Das ist Personal Preference und der Anwenderperson überlassen. 
@@ -50,3 +50,16 @@ Jetzt sollte sich die faultrep.dll und die crash.exe im \tmp Ordner befinden. We
 Start-Process "C:\tmp\crash.exe"
 Danach sollte die Datei text.txt erfolgreich verschlüsselt sein.
 
+## Shannon-Entropie
+Voraussetzung:
+- Das text.txt File
+- encrypt.ps1
+- shannonentropie.py
+- alles befindet sich im Ordner C:\tmp
+- Python-Umgebung installiert, dass es in Powershell verwendet werden kann (es kann natürlich auch eine IDE verwendet werden, wieder Personal Preference)
+
+1. Um die Entropie am Anfang zu testen ein Powershell im tmp Oderner öffnen und folgenden Befehl ausführen: python .\shannonentropie.py
+2. Die Aussgabe sollte sein: Die Datei schein nicht vershclüsselt mit dem jeweiligen Wert.
+3. Das File mit den encrypt.ps1 verschlüsseln (Schritt weiter oben schon beschrieben)
+4. nochmals python .\shannonentropie.py
+5. Jetzt solle der Hinweis kommen: Die Datei ist warhscheinlich verschlüsselt oder komprimiert.
