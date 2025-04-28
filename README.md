@@ -59,7 +59,7 @@ Voraussetzung:
 - alles befindet sich im Ordner C:\tmp
 - Python-Umgebung installiert, dass es in Powershell verwendet werden kann (es kann natürlich auch eine IDE verwendet werden, wieder Personal Preference)
 
-1. Um die Entropie am Anfang zu testen ein Powershell im tmp Oderner öffnen und folgenden Befehl ausführen: python .\shannonentropie.py
+1. Um die Entropie am Anfang zu testen ein Powershell im tmp Ordner öffnen und folgenden Befehl ausführen: python .\shannonentropie.py
 2. Die Aussgabe sollte sein: Die Datei schein nicht vershclüsselt mit dem jeweiligen Wert.
 3. Das File mit den encrypt.ps1 verschlüsseln (Schritt weiter oben schon beschrieben)
 4. nochmals python .\shannonentropie.py
