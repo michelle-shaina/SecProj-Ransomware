@@ -6,10 +6,11 @@ Die KQL-Query, wurde auf der internen Umgebung im Geschäft getestet auf dem Mic
 ## Voraussetzungen
 Umfeld: Windows 11 (Version selbst sollte keine Rolle spielen)
 Ordner: Auch wenn ich die einzlenen Files aus Schönheitsgründen in einzelne Ordner gepackt habe, müssen alle Files im \tmp Ordner liegen, da ich die Pfade gehardcoded habe. 
+Text.txt: Das File ist wenn nichts anderes angegeben, immer im nicht verschlüsseltem Zustand zu benutzen.
 
 ## AES-Verschlüsselungs-Skript
 Vorsaussetzung: 
-- :\ Verzeichnis und ein Ordner der tmp heisst, also: C:\tmp. 
+- C:\ Verzeichnis und ein Ordner der tmp heisst, also: C:\tmp. 
 - Das text.txt File
 - Das File encrypt.ps1
 - Das File decrypt.ps1
