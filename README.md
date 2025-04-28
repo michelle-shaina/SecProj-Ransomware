@@ -4,9 +4,9 @@ Allgemein habe ich mich in einem Windows 11 Umfeld bewegt. Ich versuche hier all
 Die KQL-Query, wurde auf der internen Umgebung im Geschäft getestet auf dem Microsoft Defender Endpoint über Advanced Hunting. Diese kann selbst im Unternehmen getestet werden oder mit einer guten Test-Umgebung die selbst aufgebaut wurde mit den richtigen Testdaten. Dieses Skript werde ich in dem Fall auch nur so erklären, dass es in einer fertig aufgesetzten Umgebung getestet werden könnte.
 
 ## Voraussetzungen
-Umfeld: Windows 11 (Version selbst sollte keine Rolle spielen)
-Ordner: Auch wenn ich die einzlenen Files aus Schönheitsgründen in einzelne Ordner gepackt habe, müssen alle Files im \tmp Ordner liegen, da ich die Pfade gehardcoded habe. 
-Text.txt: Das File ist wenn nichts anderes angegeben, immer im nicht verschlüsseltem Zustand zu benutzen.
+- Umfeld: Windows 11 (Version selbst sollte keine Rolle spielen)
+- Ordner: Auch wenn ich die einzlenen Files aus Schönheitsgründen in einzelne Ordner gepackt habe, müssen alle Files im \tmp Ordner liegen, da ich die Pfade gehardcoded habe. 
+- text.txt: Das File ist wenn nichts anderes angegeben, immer im nicht verschlüsseltem Zustand zu benutzen.
 
 ## AES-Verschlüsselungs-Skript
 Vorsaussetzung: 
